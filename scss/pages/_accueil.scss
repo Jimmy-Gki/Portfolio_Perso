@@ -209,11 +209,15 @@ body {
 
 //Compétences
 #competences {
-    background-color: #1a1c22;
+    background: url(../../images/map.png);
+    background-attachment: fixed;
     color: $text;
     width: 100%;
-    padding-bottom: 150px;
     border-bottom: 1px solid $tertiaire;
+    .competences__font {
+        background-color: rgba($color: $background, $alpha: 0.97);
+        padding-bottom: 150px;
+    }
     .competence__titre {
         font-family: "Orbitron", sans-serif;
         font-size: $size-title;
@@ -233,10 +237,9 @@ body {
         width: 20%;
         padding: 0 50px;
         justify-content: center;
-        background-color: #0d0f17;
+        background-color: rgba($color: $primaire, $alpha: 0.43);
         border-radius: 15px;
-        box-shadow: 10px 10px 15px -8px $text;
-        border: 1px solid $tertiaire;
+        border: 3px solid $secondaire;
         h3 {
             text-align: center;
             font-size: 30px;
@@ -302,7 +305,7 @@ svg .circle__langages, .circle__frameworks{
 }
 .circle__langages:nth-child(1), .circle__frameworks:nth-child(1) {
     stroke-dashoffset: 0;
-    stroke: $primaire;
+    stroke: $secondaire;
 }
 .html:nth-child(2) {
     stroke-dashoffset: 50;
