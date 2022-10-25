@@ -30,10 +30,10 @@
                                 <a href="#competences">Mes compétences</a>
                             </li>
                             <li class="projets">
-                                <a href="#">Mes projets</a>
+                                <a href="#projets">Mes projets</a>
                             </li>
                             <li class="contacter">
-                                <a href="#">Me contacter</a>
+                                <a href="#contact">Me contacter</a>
                             </li>
                         </ul> 
             </header>
@@ -46,7 +46,7 @@
             </div>
             <div class="head_droite">
                 <p class="head_desc">
-                    Hey ! Moi c’est Jimmy, jeune développeur web, sortant du lycée avec un bac technologique, j’ai décidé de continuer sur cette voie 
+                    Salut ! Moi c’est Jimmy, jeune développeur web, sortant du lycée avec un bac technologique, j’ai décidé de continuer sur cette voie 
                     afin de m’orienter vers le développement web.<br/>J’ai par la suite intégré la formation d’OpenClassrooms afin de réaliser mon objectif. 
                     <br/>J’ai donc maintenant des connaissances sur plusieurs technologies telles que Html, Css, Javascript ou encore NodeJS. Au niveau de la gestion 
                     de projet je me suis familiarisé avec l’outil Git.<br/><br/>
@@ -213,8 +213,99 @@
             </div>
         </div>
     </section>
+    <!--SECTION PROJETS-->
     <section id="projets">
-
+        <div class="projets__title"> <h1>Mes Projets</h1> </div>
+            <div class="projets__container">
+                <article class="card">
+                    <img src="./images/P2.png" alt="Projet 2" class="card__img">
+                    <div class="card__data">
+                        <h2 class="card__title">Booki</h2>
+                        <p class="card__description">Intégration en responsive d'une maquette</p>
+                        <p class="card__langage">HTML, CSS</p>
+                        <a href="https://github.com/Jimmy-Gki/P2_Gorecki_Jimmy.git">Github</a>
+                        <a href="https://jimmy-gki.github.io/P2_Gorecki_Jimmy/">Voir le site</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="./images/P3.png" alt="Projet 2" class="card__img">
+                    <div class="card__data">
+                        <h2 class="card__title">OhMyFood</h2>
+                        <p class="card__description">Dynamisation d'une page web avec des animations css</p>
+                        <p class="card__langage">HTML, CSS, SASS</p>
+                        <a href="https://github.com/Jimmy-Gki/JimmyGorecki_3_10122021.git">Github</a>
+                        <a href="https://jimmy-gki.github.io/JimmyGorecki_3_10122021/">Voir le site</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="./images/P4.png" alt="Projet 2" class="card__img">
+                    <div class="card__data">
+                        <h2 class="card__title">La Chouette Agence</h2>
+                        <p class="card__description">Optimisation du référencement d'un site web existant</p>
+                        <p class="card__langage">HTML, CSS</p>
+                        <a href="https://github.com/Jimmy-Gki/Projet4-VF.git">Github</a>
+                        <a href="https://jimmy-gki.github.io/Projet4-VF/index.html">Voir le site</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="./images/P5.png" alt="Projet 2" class="card__img">
+                    <div class="card__data">
+                        <h2 class="card__title">Kanap</h2>
+                        <p class="card__description">Construction d'un site e-commerce en Javascript</p>
+                        <p class="card__langage">Javascript</p>
+                        <a href="https://github.com/Jimmy-Gki/Projet_5.git">Github</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="./images/P6.png" alt="Projet 2" class="card__img">
+                    <div class="card__data">
+                        <h2 class="card__title">Hot Takes</h2>
+                        <p class="card__description">Création d'une API sécurisée pour une application d'avis gastronomiques</p>
+                        <p class="card__langage">Javascript, NodeJS, MongoDB</p>
+                        <a href="#projets">Github</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="./images/P2.png" alt="Projet 2" class="card__img">
+                    <div class="card__data">
+                        <h2 class="card__title">Kasa</h2>
+                        <p class="card__description">Création d'une application web de location immobilière</p>
+                        <p class="card__langage">HTML, CSS, React</p>
+                        <a href="#projets">Github</a>
+                        <a href="#projets">Voir le site</a>
+                    </div>
+                </article>
+            </div>
+    </section>
+    <section id="contact">
+    <form action="">
+        <div class="title">
+          <h2>CONTACT</h2>
+        </div>
+        <div class="half">
+          <div class="item">
+            <label for="name">NAME</label>
+            <input type="text" id = "name">
+          </div>
+          <div class="item">
+            <label for="email">EMAIL</label>
+            <input type="text" id = "email">
+          </div>
+        </div>
+        <div class="full">
+          <label for="message">MESSAGE</label>
+          <textarea name="" id = "message"></textarea>
+        </div>
+        <div class="action">
+          <input type="submit" value = "SEND MESSAGE">
+          <input type="reset" value = "RESET">
+        </div>
+        <div class="icons">
+          <a href="" class = "bi bi-linkedin"></a>
+          <a href="" class = "bi bi-instagram"></a>
+          <a href="" class = "bi bi-github"></a>
+        </div>
+      </form>
     </section>
 </main>
 </body>
