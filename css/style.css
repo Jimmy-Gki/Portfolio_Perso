@@ -596,7 +596,7 @@ form .icons a {
   margin-right: 25px;
 }
 
-form .half .item input:focus, form .full textarea:focus, form .action input[type=reset]:hover, form .icons a:hover {
+form .half .item input:focus, form .full textarea:focus, form .action input[type=reset]:hover {
   background: rgba(255, 255, 255, 0.075);
 }
 
