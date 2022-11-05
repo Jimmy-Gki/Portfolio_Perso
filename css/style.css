@@ -716,6 +716,29 @@ svg .circle__langages, .circle__frameworks {
     text-align: end;
     line-height: 40px;
   }
+  .cv {
+    animation: affichage-menu 0.9s ease-in-out both;
+  }
+  .parcours {
+    animation: affichage-menu 0.7s ease-in-out both;
+  }
+  .competences {
+    animation: affichage-menu 0.5s ease-in-out both;
+  }
+  .projets {
+    animation: affichage-menu 0.3s ease-in-out both;
+  }
+  .contacter {
+    animation: affichage-menu 0.1s ease-in-out both;
+  }
+}
+@keyframes affichage-menu {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 #contact {
   background-color: #0d0f17;

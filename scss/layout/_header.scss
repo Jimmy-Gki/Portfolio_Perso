@@ -79,4 +79,28 @@
     text-align: end;
     line-height: 40px;
 }
+.cv {
+    animation: affichage-menu .9s ease-in-out both;
+}
+.parcours {
+    animation: affichage-menu .7s ease-in-out both;
+}
+.competences {
+    animation: affichage-menu .5s ease-in-out both;
+}
+.projets {
+    animation: affichage-menu .3s ease-in-out both;
+}
+.contacter {
+    animation: affichage-menu .1s ease-in-out both;
+}
+}
+
+@keyframes affichage-menu {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
