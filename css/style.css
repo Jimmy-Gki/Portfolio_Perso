@@ -637,7 +637,6 @@ svg .circle__langages, .circle__frameworks {
   padding: 0 70px;
   margin-right: auto;
   margin-left: auto;
-  align-items: center;
   display: flex;
   justify-content: space-between;
   position: sticky;
@@ -652,10 +651,12 @@ svg .circle__langages, .circle__frameworks {
 }
 @media screen and (max-width: 858px) {
   .navbar .checkbtn {
-    display: block;
+    display: flex;
+    flex-direction: row-reverse;
     color: white;
     font-size: 30px;
     float: right;
+    margin-block-start: 10px;
     cursor: pointer;
   }
 }
@@ -685,6 +686,19 @@ svg .circle__langages, .circle__frameworks {
   font-weight: 700;
 }
 
+@media screen and (max-width: 858px) {
+  .mobile-navbar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .mobile-menu {
+    display: block;
+    position: relative;
+    text-align: end;
+    line-height: 40px;
+  }
+}
 #contact {
   background-color: #0d0f17;
   padding: 100px 0;

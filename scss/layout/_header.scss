@@ -24,7 +24,6 @@
     padding: 0 70px;
     margin-right: auto;
     margin-left: auto;
-    align-items: center;
     display: flex;
     justify-content: space-between;
     position: sticky;
@@ -34,10 +33,12 @@
     .checkbtn {
         display: none; 
         @media screen and (max-width: 858px) {
-            display: block;
+            display: flex;
+            flex-direction: row-reverse;
             color: white;
             font-size: 30px;
             float: right;
+            margin-block-start: 10px;
             cursor: pointer;
         }
     }
@@ -62,4 +63,20 @@
                 font-weight: 700;
             }
         }
+}
+
+@media screen and (max-width: 858px) {
+
+.mobile-navbar {
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+}
+
+.mobile-menu {
+    display: block;
+    position: relative;
+    text-align: end;
+    line-height: 40px;
+}
 }

@@ -16,18 +16,28 @@
         <section class="container"> 
             <nav class="navbar">
                     <label class="logo-header"> <h1>JG</h1> </label>
-                    <label for="check" class="checkbtn">
-                        <i class="bi bi-list"></i>
-                    </label>
-                    <ul class="menu">
-                        <li class="cv"> <a href="#about">À propos</a> </li>
-                        <li class="parcours"> <a href="#parcours">Mon parcours</a> </li>
-                        <li class="competences"> <a href="#competences">Mes compétences</a> </li>
-                        <li class="projets"> <a href="#projets">Mes projets</a> </li>
-                        <li class="contacter"> <a href="#contact">Me contacter</a> </li>
-                    </ul> 
+                    <div class="mobile-navbar">
+                        <label for="check" class="checkbtn">
+                            <i class="bi bi-list"></i>
+                        </label>
+                        <ul class="menu">
+                            <li class="cv"> <a href="#about">À propos</a> </li>
+                            <li class="parcours"> <a href="#parcours">Mon parcours</a> </li>
+                            <li class="competences"> <a href="#competences">Mes compétences</a> </li>
+                            <li class="projets"> <a href="#projets">Mes projets</a> </li>
+                            <li class="contacter"> <a href="#contact">Me contacter</a> </li>
+                        </ul> 
+                    </div>
             </nav>
         </section>
+        <script>
+            const menuHamburger = document.querySelector(".checkbtn")
+            const navLinks = document.querySelector(".menu")
+     
+            menuHamburger.addEventListener('click',()=>{
+            navLinks.classList.toggle('mobile-menu')
+            })
+        </script>
     <!--Head avec nom du métier + briève description-->
         <section id="about">
             <div class="head_gauche">
