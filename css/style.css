@@ -658,10 +658,12 @@ svg .circle__langages, .circle__frameworks {
   display: flex;
   justify-content: space-between;
   position: sticky;
+  align-items: center;
 }
 @media screen and (max-width: 858px) {
   .navbar {
     padding: 0 40px;
+    align-items: initial;
   }
 }
 .navbar .checkbtn {
@@ -712,7 +714,6 @@ svg .circle__langages, .circle__frameworks {
   }
   .mobile-menu {
     display: block;
-    position: relative;
     text-align: end;
     line-height: 40px;
   }
