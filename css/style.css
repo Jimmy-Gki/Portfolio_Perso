@@ -523,6 +523,7 @@ svg .circle__langages, .circle__frameworks {
 @media screen and (max-width: 766px) {
   .projets__title {
     font-size: 20px;
+    padding-top: 0;
   }
 }
 
@@ -549,6 +550,12 @@ svg .circle__langages, .circle__frameworks {
   .card {
     justify-content: center;
     margin: 12px 35px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .card {
+    width: 325px;
+    height: 325px;
   }
 }
 .card .card__data {
