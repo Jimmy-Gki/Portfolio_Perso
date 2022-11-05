@@ -14,46 +14,36 @@
     <div id="head">
     <div class="onglet_1">
         <section class="container"> 
-            <header class="navbar">
-                        <div class="logo-header">
-                            <h1>JG</h1>
-                            </span>
-                        </div>
-                        <ul class="menu">
-                            <li class="cv">
-                                <a href="#about">À propos</a>
-                            </li>
-                            <li class="parcours">
-                                <a href="#parcours">Mon parcours</a>
-                            </li>
-                            <li class="competences">
-                                <a href="#competences">Mes compétences</a>
-                            </li>
-                            <li class="projets">
-                                <a href="#projets">Mes projets</a>
-                            </li>
-                            <li class="contacter">
-                                <a href="#contact">Me contacter</a>
-                            </li>
-                        </ul> 
-            </header>
+            <nav class="navbar">
+                    <label class="logo-header"> <h1>JG</h1> </label>
+                    <label for="check" class="checkbtn">
+                        <i class="bi bi-list"></i>
+                    </label>
+                    <ul class="menu">
+                        <li class="cv"> <a href="#about">À propos</a> </li>
+                        <li class="parcours"> <a href="#parcours">Mon parcours</a> </li>
+                        <li class="competences"> <a href="#competences">Mes compétences</a> </li>
+                        <li class="projets"> <a href="#projets">Mes projets</a> </li>
+                        <li class="contacter"> <a href="#contact">Me contacter</a> </li>
+                    </ul> 
+            </nav>
         </section>
     <!--Head avec nom du métier + briève description-->
-        <div id="about">
+        <section id="about">
             <div class="head_gauche">
                 <h1 class="head_titre">Jimmy Gorecki</h1>
                 <h2 class="head_sous-titre">Développeur web junior</h2>
             </div>
             <div class="head_droite">
                 <p class="head_desc">
-                    Salut ! Moi c’est Jimmy, jeune développeur web, sortant du lycée avec un bac technologique, j’ai décidé de continuer sur cette voie 
+                    Jeune développeur web, sortant du lycée avec un bac technologique, j’ai décidé de continuer sur cette voie 
                     afin de m’orienter vers le développement web.<br/>J’ai par la suite intégré la formation d’OpenClassrooms afin de réaliser mon objectif. 
                     <br/>J’ai donc maintenant des connaissances sur plusieurs technologies telles que Html, Css, Javascript ou encore NodeJS. Au niveau de la gestion 
                     de projet je me suis familiarisé avec l’outil Git.<br/><br/>
                     Je suis actuellement à la recherche d’un poste de développeur front-end afin de me perfectionner et d’apprendre de nouvelles technologies.
                 </p>
             </div>
-        </div>
+        </section>
     </div>
     </div>
     <!--Onglet recap de mon parcours-->
@@ -231,7 +221,7 @@
                     <img src="./images/P3.png" alt="Projet 2" class="card__img">
                     <div class="card__data">
                         <h2 class="card__title">OhMyFood</h2>
-                        <p class="card__description">Dynamisation d'une page web avec des animations css</p>
+                        <p class="card__description">Dynamisation d'une page web avec des animations css dynamiques</p>
                         <p class="card__langage">HTML, CSS, SASS</p>
                         <a href="https://github.com/Jimmy-Gki/JimmyGorecki_3_10122021.git">Github</a>
                         <a href="https://jimmy-gki.github.io/JimmyGorecki_3_10122021/">Voir le site</a>
@@ -278,27 +268,26 @@
             </div>
     </section>
     <section id="contact">
-    <form action="">
+    <form>
         <div class="title">
           <h2>CONTACT</h2>
         </div>
         <div class="half">
           <div class="item item__name">
             <label for="name">NOM</label>
-            <input type="text" id = "name">
+            <input type="text" id = "nom" autocomplete="off">
           </div>
           <div class="item item__email">
             <label for="email">EMAIL</label>
-            <input type="email" id = "email">
+            <input type="email" id = "mail" autocomplete="off">
           </div>
         </div>
         <div class="full">
           <label for="message">MESSAGE</label>
-          <textarea name="" id = "message"></textarea>
+          <textarea name="" id = "msg"></textarea>
         </div>
         <div class="action">
-          <input type="submit" value = "ENVOYER">
-          <input type="reset" value = "RÉINITIALISER">
+          <button id="btn__submit">ENVOYER</button>
         </div>
         <div class="icons">
           <a href="https://www.linkedin.com/in/jimmy-gorecki-105a9b254/" class = "bi bi-linkedin"></a>
@@ -307,6 +296,31 @@
         </div>
       </form>
     </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        var btn = document.getElementById('btn__submit');
+        btn.addEventListener('click', function(e) {
+            e.preventDefault()
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            var body = 'name: ' +name + '<br/> email: ' + email + '<br/> message: ' + message;
+
+            function sendEmail() {
+            email.send({
+                Host : "smtp.gmail.com",
+                Username : "jimmy27.gorecki01@gmail.com",
+                Password : "bmlzozwybxjdegva",
+                To : 'jimmy27.gorecki01@gmail.com',
+                From : email,
+                Subject : name,
+                Body : body
+            }).then(
+            message => alert(message)
+            );
+        }
+        })
+    </script>
 </main>
 </body>
 </html>

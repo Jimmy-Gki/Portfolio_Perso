@@ -18,20 +18,43 @@ body {
   padding: 200px 0;
   border-bottom: 1px solid #ff9100;
 }
+@media screen and (max-width: 1023px) {
+  #about {
+    display: block;
+    padding: 100px 0;
+  }
+}
 #about .head_gauche {
   width: 50%;
   font-family: "Orbitron", sans-serif;
   font-size: 25px;
+}
+@media screen and (max-width: 1023px) {
+  #about .head_gauche {
+    width: 100%;
+  }
 }
 #about .head_gauche .head_titre {
   text-align: center;
   display: flex;
   padding: 30px 60px;
 }
+@media screen and (max-width: 1023px) {
+  #about .head_gauche .head_titre {
+    justify-content: center;
+  }
+}
 #about .head_gauche .head_sous-titre {
   padding: 10px 60px;
   display: flex;
   font-size: 25px;
+}
+@media screen and (max-width: 1023px) {
+  #about .head_gauche .head_sous-titre {
+    justify-content: center;
+    margin-bottom: 100px;
+    text-align: center;
+  }
 }
 #about .head_droite {
   width: 50%;
@@ -39,10 +62,22 @@ body {
   font-size: 18px;
   padding-right: 60px;
 }
+@media screen and (max-width: 1023px) {
+  #about .head_droite {
+    width: 100%;
+    padding-right: 0;
+  }
+}
 #about .head_droite .head_desc {
   line-height: 40px;
   width: 85%;
   margin: auto;
+}
+@media screen and (max-width: 1023px) {
+  #about .head_droite .head_desc {
+    width: 85%;
+    text-align: center;
+  }
 }
 
 #parcours {
@@ -71,6 +106,21 @@ body {
   border-radius: 10px;
   margin: 100px auto;
 }
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .parcours_box {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .parcours_box {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .parcours_box {
+    width: 95%;
+  }
+}
 .parcours_box .parcours_contenu {
   padding: 60px 0;
 }
@@ -80,15 +130,27 @@ body {
   text-align: center;
   margin: 40px 0 60px 0;
 }
+@media screen and (max-width: 766px) {
+  .parcours_box .parcours_contenu .parcours_titre {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+}
 .parcours_box .parcours_contenu .parcours_titre h1 {
   margin: 0;
 }
 .parcours_box .parcours_contenu .parcours_liste {
   font-family: "Lato", sans-serif;
   padding: 0 40px;
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: 600;
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 766px) {
+  .parcours_box .parcours_contenu .parcours_liste {
+    font-size: 16px;
+  }
 }
 .parcours_box .parcours_contenu .parcours_liste .brevet {
   text-align: start;
@@ -104,8 +166,18 @@ body {
   padding-right: 15px;
   padding-left: 70px;
 }
+@media screen and (max-width: 768px) {
+  .parcours_box .parcours_contenu .parcours_liste .brevet i {
+    padding-left: 0;
+  }
+}
 .parcours_box .parcours_contenu .parcours_liste .brevet p {
   padding-left: 20px;
+}
+@media screen and (max-width: 768px) {
+  .parcours_box .parcours_contenu .parcours_liste .brevet p {
+    padding-left: 5px;
+  }
 }
 .parcours_box .parcours_contenu .parcours_liste .bac {
   text-align: end;
@@ -121,9 +193,19 @@ body {
 .parcours_box .parcours_contenu .parcours_liste .bac p {
   padding-right: 20px;
 }
+@media screen and (max-width: 768px) {
+  .parcours_box .parcours_contenu .parcours_liste .bac p {
+    padding-right: 5px;
+  }
+}
 .parcours_box .parcours_contenu .parcours_liste .bac i {
   padding-left: 15px;
   padding-right: 70px;
+}
+@media screen and (max-width: 768px) {
+  .parcours_box .parcours_contenu .parcours_liste .bac i {
+    padding-right: 0;
+  }
 }
 .parcours_box .parcours_contenu .parcours_liste .formation {
   text-align: start;
@@ -139,8 +221,18 @@ body {
   padding-right: 15px;
   padding-left: 70px;
 }
+@media screen and (max-width: 768px) {
+  .parcours_box .parcours_contenu .parcours_liste .formation i {
+    padding-left: 0;
+  }
+}
 .parcours_box .parcours_contenu .parcours_liste .formation p {
   padding-left: 20px;
+}
+@media screen and (max-width: 768px) {
+  .parcours_box .parcours_contenu .parcours_liste .formation p {
+    padding-left: 5px;
+  }
 }
 .parcours_box .parcours_contenu .parcours_liste .stage {
   text-align: end;
@@ -154,9 +246,19 @@ body {
 .parcours_box .parcours_contenu .parcours_liste .stage p {
   padding-right: 20px;
 }
+@media screen and (max-width: 768px) {
+  .parcours_box .parcours_contenu .parcours_liste .stage p {
+    padding-right: 5px;
+  }
+}
 .parcours_box .parcours_contenu .parcours_liste .stage i {
   padding-left: 15px;
   padding-right: 70px;
+}
+@media screen and (max-width: 768px) {
+  .parcours_box .parcours_contenu .parcours_liste .stage i {
+    padding-right: 0;
+  }
 }
 
 #cv {
@@ -213,7 +315,6 @@ body {
   background-attachment: fixed;
   color: rgb(224, 224, 224);
   width: 100%;
-  border-bottom: 1px solid rgb(255, 145, 0);
 }
 #competences .competences__font {
   background-color: rgba(26, 28, 34, 0.97);
@@ -227,6 +328,11 @@ body {
   display: flex;
   padding: 50px 0;
 }
+@media screen and (max-width: 766px) {
+  #competences .competence__titre {
+    font-size: 20px;
+  }
+}
 
 .competence__container {
   display: flex;
@@ -234,6 +340,13 @@ body {
   margin: auto;
   font-family: "Lato", sans-serif;
   justify-content: space-between;
+}
+@media screen and (max-width: 1023px) {
+  .competence__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 .competence__container .competence__box {
   width: 20%;
@@ -243,10 +356,30 @@ body {
   border-radius: 15px;
   border: 3px solid rgb(2, 58, 80);
 }
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .competence__container .competence__box {
+    width: 70%;
+    justify-content: center;
+    margin: 40px auto;
+  }
+}
+@media screen and (max-width: 766px) {
+  .competence__container .competence__box {
+    width: 90%;
+    margin: 40px auto;
+    justify-content: center;
+    padding: 0;
+  }
+}
 .competence__container .competence__box h3 {
   text-align: center;
   font-size: 30px;
   font-weight: 900;
+}
+@media screen and (max-width: 766px) {
+  .competence__container .competence__box h3 {
+    font-size: 26px;
+  }
 }
 
 svg {
@@ -263,11 +396,22 @@ span {
   font-weight: 900;
   font-size: 20px;
 }
+@media screen and (max-width: 766px) {
+  span {
+    font-size: 16px;
+  }
+}
 
 .langage__info {
   display: flex;
   justify-content: center;
   padding: 0 20px;
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .langage__info {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .langage__name {
@@ -278,13 +422,36 @@ span {
   align-items: center;
   width: 100%;
 }
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .langage__name {
+    justify-content: baseline;
+    display: flex;
+  }
+}
+@media screen and (max-width: 766px) {
+  .langage__name {
+    padding: 5px 0;
+  }
+}
 .langage__name p {
   font-size: 18px;
   font-weight: 700;
   text-align: center;
 }
+@media screen and (max-width: 766px) {
+  .langage__name p {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+}
 .langage__name img {
   width: 50px;
+}
+@media screen and (max-width: 766px) {
+  .langage__name img {
+    width: 35px;
+    margin-right: 20px;
+  }
 }
 
 .pourcent {
@@ -341,6 +508,7 @@ svg .circle__langages, .circle__frameworks {
   margin: auto;
   background-color: #1a1c22;
   border-bottom: 1px solid rgb(255, 145, 0);
+  border-top: 1px solid rgb(255, 145, 0);
 }
 
 .projets__title {
@@ -351,6 +519,11 @@ svg .circle__langages, .circle__frameworks {
   display: flex;
   padding: 50px 0;
   color: rgb(224, 224, 224);
+}
+@media screen and (max-width: 766px) {
+  .projets__title {
+    font-size: 20px;
+  }
 }
 
 .projets__container {
@@ -371,6 +544,12 @@ svg .circle__langages, .circle__frameworks {
   overflow: hidden;
   font-family: "Lato", sans-serif;
   border-radius: 10px;
+}
+@media screen and (max-width: 1023px) {
+  .card {
+    justify-content: center;
+    margin: 12px 35px;
+  }
 }
 .card .card__data {
   position: absolute;
@@ -396,6 +575,11 @@ svg .circle__langages, .circle__frameworks {
   border-bottom: 2px solid rgb(255, 145, 0);
   margin: 40px 10px 25px 10px;
   padding: 10px 0;
+}
+@media screen and (max-width: 766px) {
+  .card .card__title {
+    font-size: 20px;
+  }
 }
 .card .card__description {
   padding: 10px;
@@ -458,6 +642,23 @@ svg .circle__langages, .circle__frameworks {
   justify-content: space-between;
   position: sticky;
 }
+@media screen and (max-width: 858px) {
+  .navbar {
+    padding: 0 40px;
+  }
+}
+.navbar .checkbtn {
+  display: none;
+}
+@media screen and (max-width: 858px) {
+  .navbar .checkbtn {
+    display: block;
+    color: white;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+  }
+}
 
 .logo-header {
   justify-content: flex-start;
@@ -467,6 +668,11 @@ svg .circle__langages, .circle__frameworks {
   display: flex;
   white-space: nowrap;
   justify-content: flex-end;
+}
+@media screen and (max-width: 858px) {
+  .menu {
+    display: none;
+  }
 }
 .menu li {
   list-style: none;
@@ -490,8 +696,14 @@ form {
   margin: auto;
   max-width: 97%;
   border-radius: 4px;
+  border: 1px solid rgb(255, 145, 0);
   padding: 55px 30px;
   font-family: "Lato", sans-serif;
+}
+@media screen and (max-width: 767px) {
+  form {
+    width: 70%;
+  }
 }
 
 form .title h2 {
@@ -543,6 +755,7 @@ form .full {
 
 .item__email, .item__name {
   margin-right: 6px;
+  caret-color: rgb(255, 145, 0);
 }
 
 form .full textarea {
@@ -557,13 +770,14 @@ form .full textarea {
   resize: none;
   color: rgb(224, 224, 224);
   font-family: "Lato", sans-serif;
+  caret-color: rgb(255, 145, 0);
 }
 
 form .action {
   margin-bottom: 32px;
 }
 
-form .action input {
+form .action button {
   background: transparent;
   border-radius: 4px;
   border: 1px solid white;
@@ -577,12 +791,13 @@ form .action input {
   margin-right: 10px;
 }
 
-form .action input[type=submit] {
+form .action button {
   background: white;
   color: #0d0f17;
 }
 
-form .action input[type=reset] {
+form .action button:hover {
+  background: #0d0f17;
   color: rgb(224, 224, 224);
 }
 
@@ -596,11 +811,11 @@ form .icons a {
   margin-right: 25px;
 }
 
-form .half .item input:focus, form .full textarea:focus, form .action input[type=reset]:hover {
+form .half .item #mail:focus, form .full #msg:focus, form .half .item #nom:focus {
   background: rgba(255, 255, 255, 0.075);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   form .half {
     flex-direction: column;
   }

@@ -15,19 +15,34 @@ body {
     width: 100%;
     padding: 200px 0;
     border-bottom: 1px solid #ff9100;
+    @media screen and (max-width: 1023px) {
+        display: block;
+        padding: 100px 0;
+    }
     .head_gauche {
         width: 50%;
         font-family: "Orbitron", sans-serif;
         font-size: $size-title;
+        @media screen and (max-width: 1023px) {
+            width: 100%;
+        }
         .head_titre {
             text-align: center;
             display: flex;
             padding: 30px 60px;
+            @media screen and (max-width: 1023px) {
+                justify-content: center;
+            }
         }
         .head_sous-titre {
             padding: 10px 60px;
             display: flex;
             font-size: 25px;
+            @media screen and (max-width: 1023px) {
+                justify-content: center;
+                margin-bottom: 100px;
+                text-align: center;
+            }
         }
     }
     .head_droite {
@@ -35,10 +50,18 @@ body {
         font-family: "Lato", sans-serif;
         font-size: 18px;
         padding-right: 60px;
+        @media screen and (max-width: 1023px) {
+            width: 100%;
+            padding-right: 0;
+        }
         .head_desc {
             line-height: 40px;
             width: 85%;
             margin: auto;
+            @media screen and (max-width: 1023px) {
+                width: 85%;
+                text-align: center;
+            }
         }
     }
 }
@@ -68,6 +91,15 @@ body {
     border: 3px solid rgba($color: $secondaire, $alpha: 1.0);
     border-radius: 10px;
     margin: 100px auto;
+    @media screen and (min-width: 1024px) and (max-width: 1440px) {
+        width: 70%;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        width: 80%;
+    }
+    @media screen and (max-width: 767px) {
+        width: 95%;
+    }
     .parcours_contenu {
         padding: 60px 0;
         .parcours_titre {
@@ -75,6 +107,10 @@ body {
             font-size: $size-title;
             text-align: center;
             margin: 40px 0 60px 0;
+            @media screen and (max-width: 766px) {
+                font-size: $size-title_phone;
+                margin: 20px 0 30px 0;
+            }
             h1 {
                 margin: 0;
             }
@@ -82,9 +118,13 @@ body {
         .parcours_liste {
             font-family: "Lato", sans-serif;
             padding: 0 40px;
-            font-size: 22px;
+            font-size: $size-text;
+            font-weight: 600;
             display: flex;
             flex-direction: column;
+            @media screen and (max-width: 766px) {
+                font-size: $size-text_phone;
+            }
             .brevet {
                 text-align: start;
                 justify-content: flex-start;
@@ -97,9 +137,15 @@ body {
                 i {
                     padding-right: 15px;
                     padding-left: 70px;
+                    @media screen and (max-width: 768px) {
+                        padding-left: 0;
+                    }
                 }
                 p {
                     padding-left: 20px;
+                    @media screen and (max-width: 768px) {
+                        padding-left: 5px;
+                    }
                 }
             }
             .bac {
@@ -114,10 +160,16 @@ body {
                 border-bottom: 3px solid rgba($color: #000000, $alpha: 1.0);
                 p {
                     padding-right: 20px;
+                    @media screen and (max-width: 768px) {
+                        padding-right: 5px;
+                    }
                 }
                 i {
                     padding-left: 15px;
                     padding-right: 70px;
+                    @media screen and (max-width: 768px) {
+                        padding-right: 0;
+                    }
                 }
             }
             .formation {
@@ -132,9 +184,15 @@ body {
                 i {
                     padding-right: 15px;
                     padding-left: 70px;
+                    @media screen and (max-width: 768px) {
+                        padding-left: 0;
+                    }
                 }
                 p {
                     padding-left: 20px;
+                    @media screen and (max-width: 768px) {
+                        padding-left: 5px;
+                    }
                 }
             }
             .stage {
@@ -147,10 +205,16 @@ body {
                 margin: 10px 20px 0 20px; 
                 p {
                     padding-right: 20px;
+                    @media screen and (max-width: 768px) {
+                        padding-right: 5px;
+                    }
                 }
                 i {
                     padding-left: 15px;
                     padding-right: 70px;
+                    @media screen and (max-width: 768px) {
+                        padding-right: 0;;
+                    }
                 }
             }
         }
@@ -172,7 +236,7 @@ body {
             display: block;
             text-decoration: none;
             font-family: "Lato", sans-serif;
-            font-size: 18px;
+            font-size: $size-text;
             font-weight: 800;
             color: $text;
             z-index: 200;
@@ -213,7 +277,6 @@ body {
     background-attachment: fixed;
     color: $text;
     width: 100%;
-    border-bottom: 1px solid $tertiaire;
     .competences__font {
         background-color: rgba($color: $background, $alpha: 0.97);
         padding-bottom: 150px;
@@ -225,6 +288,9 @@ body {
         justify-content: center;
         display: flex;
         padding: 50px 0;
+        @media screen and (max-width: 766px) {
+            font-size: $size-title_phone;
+        }
     }
 }
 .competence__container {
@@ -233,6 +299,11 @@ body {
     margin: auto;
     font-family: "Lato", sans-serif;
     justify-content: space-between;
+    @media screen and (max-width: 1023px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
     .competence__box {
         width: 20%;
         padding: 0 50px;
@@ -240,10 +311,24 @@ body {
         background-color: rgba($color: $primaire, $alpha: 0.43);
         border-radius: 15px;
         border: 3px solid $secondaire;
+        @media screen and (min-width: 767px) and (max-width: 1023px) {
+            width: 70%;
+            justify-content: center;
+            margin: 40px auto;
+        }
+        @media screen and (max-width: 766px) {
+            width: 90%;
+            margin: 40px auto;
+            justify-content: center;
+            padding: 0;
+        }
         h3 {
             text-align: center;
             font-size: 30px;
             font-weight: 900;
+            @media screen and (max-width: 766px) {
+                font-size: 26px;
+            }
         }
     }
 }
@@ -260,12 +345,19 @@ span {
     transform: translate(-50%, -50%);
     font-weight: 900;
     font-size: 20px;
+    @media screen and (max-width: 766px) {
+        font-size: $size-text_phone;
+    }
 }
 
 .langage__info {
     display: flex;
     justify-content: center;
     padding: 0 20px;
+    @media screen and (min-width: 767px) and (max-width: 1023px) {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .langage__name {
@@ -275,13 +367,28 @@ span {
     text-align: center; 
     align-items: center;
     width: 100%;
+    @media screen and (min-width: 767px) and (max-width: 1023px) {
+        justify-content: baseline;
+        display: flex;
+    }
+    @media screen and (max-width: 766px) {
+        padding: 5px 0;
+    }
     p {
-        font-size: 18px;
+        font-size: $size-text;
         font-weight: 700;
         text-align: center;
+        @media screen and (max-width: 766px) {
+            margin-left: 20px;
+            font-size: $size-text_phone;
+        }
     }
     img {
         width: 50px;
+        @media screen and (max-width: 766px) {
+            width: 35px;
+            margin-right: 20px;
+        }
     }
 }
 
@@ -335,6 +442,7 @@ svg .circle__langages, .circle__frameworks{
     margin: auto;
     background-color: $background;
     border-bottom: 1px solid $tertiaire;
+    border-top: 1px solid $tertiaire;
 }
 
 .projets__title {
@@ -345,6 +453,9 @@ svg .circle__langages, .circle__frameworks{
         display: flex;
         padding: 50px 0;
         color: $text;
+        @media screen and (max-width: 766px) {
+            font-size: $size-title_phone;
+        }
 }
 
 .projets__container {
@@ -365,6 +476,10 @@ svg .circle__langages, .circle__frameworks{
     overflow: hidden;
     font-family: "Lato", sans-serif;
     border-radius: 10px;
+    @media screen and (max-width: 1023px) {
+        justify-content: center;
+        margin: 12px 35px;
+    }
         .card__data {
             position: absolute;
             top: 0;
@@ -389,6 +504,9 @@ svg .circle__langages, .circle__frameworks{
             border-bottom: 2px solid $tertiaire;
             margin: 40px 10px 25px 10px;
             padding: 10px 0;
+            @media screen and (max-width: 766px) {
+                font-size: $size-title_phone;
+            }
         }
         .card__description {
             padding: 10px;

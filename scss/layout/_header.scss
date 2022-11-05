@@ -28,6 +28,19 @@
     display: flex;
     justify-content: space-between;
     position: sticky;
+    @media screen and (max-width: 858px) {
+        padding: 0 40px;
+    }
+    .checkbtn {
+        display: none; 
+        @media screen and (max-width: 858px) {
+            display: block;
+            color: white;
+            font-size: 30px;
+            float: right;
+            cursor: pointer;
+        }
+    }
 }
 .logo-header {
     justify-content: flex-start;
@@ -36,6 +49,9 @@
     display: flex;
     white-space: nowrap;
     justify-content: flex-end;
+    @media screen and (max-width: 858px) {
+        display: none;
+    }
         li {
             list-style: none;
             a {
