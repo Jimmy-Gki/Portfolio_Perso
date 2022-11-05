@@ -549,13 +549,14 @@ svg .circle__langages, .circle__frameworks {
 @media screen and (max-width: 1023px) {
   .card {
     justify-content: center;
-    margin: 12px 35px;
+    margin: 12px 0px;
   }
 }
 @media screen and (max-width: 425px) {
   .card {
-    width: 325px;
-    height: 325px;
+    width: 300px;
+    height: 300px;
+    margin: 25px 5px;
   }
 }
 .card .card__data {
@@ -588,6 +589,11 @@ svg .circle__langages, .circle__frameworks {
     font-size: 20px;
   }
 }
+@media screen and (max-width: 425px) {
+  .card .card__title {
+    margin: 20px 15px 12px 15px;
+  }
+}
 .card .card__description {
   padding: 10px;
   margin-bottom: 15px;
@@ -601,6 +607,11 @@ svg .circle__langages, .circle__frameworks {
   width: 40%;
   color: black;
   background-color: rgb(224, 224, 224);
+}
+@media screen and (max-width: 425px) {
+  .card a {
+    width: 50%;
+  }
 }
 
 .card a:hover {
