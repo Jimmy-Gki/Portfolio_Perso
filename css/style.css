@@ -717,19 +717,19 @@ svg .circle__langages, .circle__frameworks {
     line-height: 40px;
   }
   .cv {
-    animation: affichage-menu 0.9s ease-in-out both;
+    animation: affichage-menu 1s ease-in both;
   }
   .parcours {
-    animation: affichage-menu 0.7s ease-in-out both;
+    animation: affichage-menu 0.8s ease-in both;
   }
   .competences {
-    animation: affichage-menu 0.5s ease-in-out both;
+    animation: affichage-menu 0.6s ease-in both;
   }
   .projets {
-    animation: affichage-menu 0.3s ease-in-out both;
+    animation: affichage-menu 0.4s ease-in both;
   }
   .contacter {
-    animation: affichage-menu 0.1s ease-in-out both;
+    animation: affichage-menu 0.2s ease-in both;
   }
 }
 @keyframes affichage-menu {
