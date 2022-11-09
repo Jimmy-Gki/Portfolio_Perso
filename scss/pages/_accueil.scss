@@ -102,6 +102,9 @@ body {
     }
     .parcours_contenu {
         padding: 60px 0;
+        @media screen and (max-width: 766px) {
+            padding: 30px 0;
+        }
         .parcours_titre {
             font-family: "Orbitron", sans-serif;
             font-size: $size-title;
@@ -232,6 +235,9 @@ body {
     position: relative;
     border-top: 1px solid #ff9100;
     border-bottom: 1px solid #ff9100;
+    @media screen and (max-width: 766px) {
+        padding: 60px 0;
+    }
         a {
             display: block;
             text-decoration: none;
