@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
+<head>
     <!--Import des données tels que les icones, le css, la police-->
     <meta charset="Utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/Logo.png" type="image/icon">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./javascript/animation.js"></script>
     <title>Jimmy Gorecki | Portfolio</title>
-
+</head>
 
 <body>
     <!--HEADER-->
@@ -30,14 +32,7 @@
                     </div>
             </nav>
         </section>
-        <script>
-            const menuHamburger = document.querySelector(".checkbtn")
-            const navLinks = document.querySelector(".menu")
-     
-            menuHamburger.addEventListener('click',()=>{
-            navLinks.classList.toggle('mobile-menu')
-            })
-        </script>
+        <script src="./javascript/menuHeader.js"></script>
     <!--Head avec nom du métier + briève description-->
         <section id="about">
             <div class="head_gauche">
@@ -45,13 +40,8 @@
                 <h2 class="head_sous-titre">Développeur web junior</h2>
             </div>
             <div class="head_droite">
-                <p class="head_desc">
-                    Jeune développeur web, sortant du lycée avec un bac technologique, j’ai décidé de continuer sur cette voie 
-                    afin de m’orienter vers le développement web.<br/>J’ai par la suite intégré la formation d’OpenClassrooms afin de réaliser mon objectif. 
-                    <br/>J’ai donc maintenant des connaissances sur plusieurs technologies telles que Html, Css, Javascript ou encore NodeJS. Au niveau de la gestion 
-                    de projet je me suis familiarisé avec l’outil Git.<br/><br/>
-                    Je suis actuellement à la recherche d’un poste de développeur front-end afin de me perfectionner et d’apprendre de nouvelles technologies.
-                </p>
+                <p class="head_desc"></p>
+                <script src="./javascript/animation.js"></script>
             </div>
         </section>
     </div>
@@ -107,7 +97,7 @@
         </div>
     </section>
     <section id="cv">
-        <a class="cv_link" href="#" download>Télécharger mon CV</a>
+        <a class="cv_link" href="./images/CV Gorecki Jimmy.pdf" download>Télécharger mon CV</a>
         <div class="cv__circles">
             <div class="cv__circle cv__circle--big"></div>
             <div class="cv__circle cv__circle--small"></div>
@@ -139,7 +129,7 @@
                                     <circle class="circle__langages css" cx="40px" cy="40px" r="40px"></circle>
                                     <circle class="circle__langages css" cx="40px" cy="40px" r="40px"></circle>
                                 </svg>
-                                <span>75%</span>
+                                <span>70%</span>
                             </div>
                         </div>
                         <div class="langage__name">
@@ -168,7 +158,7 @@
                             </div>
                         </div>
                         <div class="langage__name">
-                            <p>Bootstrap</p>
+                            <p>ReactJS</p>
                             <div class="pourcent">
                                 <svg>
                                     <circle class="circle__frameworks bootstrap" cx="40px" cy="40px" r="40px"></circle>
@@ -262,7 +252,7 @@
                         <h2 class="card__title">Hot Takes</h2>
                         <p class="card__description">Création d'une API sécurisée pour une application d'avis gastronomiques</p>
                         <p class="card__langage">Javascript, NodeJS, MongoDB</p>
-                        <a href="#projets">Github</a>
+                        <a href="https://github.com/Jimmy-Gki/P6_OpenClassroom.git">Github</a>
                     </div>
                 </article>
                 <article class="card">
@@ -271,30 +261,29 @@
                         <h2 class="card__title">Kasa</h2>
                         <p class="card__description">Création d'une application web de location immobilière</p>
                         <p class="card__langage">HTML, CSS, React</p>
-                        <a href="#projets">Github</a>
-                        <a href="#projets">Voir le site</a>
+                        <a href="https://github.com/Jimmy-Gki/KASA.git">Github</a>
                     </div>
                 </article>
             </div>
     </section>
     <section id="contact">
-    <form>
+    <form action="form-handler.php" method="post">
         <div class="title">
           <h2>CONTACT</h2>
         </div>
         <div class="half">
           <div class="item item__name">
             <label for="name">NOM</label>
-            <input type="text" id = "nom" autocomplete="off">
+            <input type="text" name="nom" class="nom" autocomplete="off">
           </div>
           <div class="item item__email">
             <label for="email">EMAIL</label>
-            <input type="email" id = "mail" autocomplete="off">
+            <input type="email" name="email" class="mail" autocomplete="off">
           </div>
         </div>
         <div class="full">
           <label for="message">MESSAGE</label>
-          <textarea name="" id = "msg"></textarea>
+          <textarea type="text" name="text" class="text"></textarea>
         </div>
         <div class="action">
           <button id="btn__submit">ENVOYER</button>
@@ -306,31 +295,6 @@
         </div>
       </form>
     </section>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        var btn = document.getElementById('btn__submit');
-        btn.addEventListener('click', function(e) {
-            e.preventDefault()
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var message = document.getElementById('message').value;
-            var body = 'name: ' +name + '<br/> email: ' + email + '<br/> message: ' + message;
-
-            function sendEmail() {
-            email.send({
-                Host : "smtp.gmail.com",
-                Username : "jimmy27.gorecki01@gmail.com",
-                Password : "bmlzozwybxjdegva",
-                To : 'jimmy27.gorecki01@gmail.com',
-                From : email,
-                Subject : name,
-                Body : body
-            }).then(
-            message => alert(message)
-            );
-        }
-        })
-    </script>
 </main>
 </body>
 </html>

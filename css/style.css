@@ -70,6 +70,7 @@ body {
 }
 #about .head_droite .head_desc {
   line-height: 40px;
+  white-space: pre-wrap;
   width: 85%;
   margin: auto;
 }
@@ -425,7 +426,7 @@ span {
 }
 
 .langage__name {
-  padding: 10px 0;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -493,7 +494,7 @@ svg .circle__langages, .circle__frameworks {
 }
 
 .css:nth-child(2) {
-  stroke-dashoffset: 63;
+  stroke-dashoffset: 75;
 }
 
 .javascript:nth-child(2) {
@@ -879,7 +880,7 @@ form .icons a {
   margin-right: 25px;
 }
 
-form .half .item #mail:focus, form .full #msg:focus, form .half .item #nom:focus {
+form .half .item input .mail:focus, form .full .text:focus, form .half .item input .nom:focus {
   background: rgba(255, 255, 255, 0.075);
 }
 

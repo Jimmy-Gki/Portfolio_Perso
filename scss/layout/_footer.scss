@@ -121,7 +121,7 @@ width: 38px;
 margin-right: 25px;
 }
   
-form .half .item #mail:focus, form .full #msg:focus, form .half .item #nom:focus { 
+form .half .item input .mail:focus, form .full .text:focus, form .half .item input .nom:focus { 
 background: rgba(255,255,255,0.075);
 }
   
