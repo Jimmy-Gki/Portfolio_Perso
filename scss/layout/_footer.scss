@@ -120,6 +120,10 @@ font-weight: 600;
 width: 38px;
 margin-right: 25px;
 }
+
+form .icons a:hover {
+    color: red;
+}
   
 form .half .item .mail:focus, form .full .text:focus, form .half .item .nom:focus { 
 background: rgba(255,255,255,0.075);
