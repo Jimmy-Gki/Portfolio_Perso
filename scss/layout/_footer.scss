@@ -134,6 +134,9 @@ background: rgba(255,255,255,0.075);
     form .half .item{
         width: 100%;
     }
+    form .half .item input {
+        width: auto;
+    }
     form .action{
         display: flex;
         flex-direction: column;

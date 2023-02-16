@@ -55,4 +55,3 @@ function handleScroll() {
   
   // Appelle la fonction une première fois au chargement de la page
   handleScroll();
-

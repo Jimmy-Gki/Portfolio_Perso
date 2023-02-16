@@ -195,7 +195,7 @@ body {
   align-items: center;
   margin: 10px 20px 0 20px;
   border-bottom: 3px solid black;
-  transform: translateX(-100px);
+  transform: translateX(-50px);
 }
 .parcours_box .parcours_contenu .parcours_liste .bac p {
   padding-right: 20px;
@@ -223,7 +223,7 @@ body {
   align-items: center;
   margin: 10px 20px 0 20px;
   border-bottom: 3px solid black;
-  transform: translateX(100px);
+  transform: translateX(50px);
 }
 .parcours_box .parcours_contenu .parcours_liste .formation i {
   padding-right: 15px;
@@ -250,7 +250,7 @@ body {
   height: 200px;
   align-items: center;
   margin: 10px 20px 0 20px;
-  transform: translateX(-100px);
+  transform: translateX(-50px);
 }
 .parcours_box .parcours_contenu .parcours_liste .stage p {
   padding-right: 20px;
@@ -498,7 +498,7 @@ svg .circle__langages, .circle__frameworks {
   transform: translate(25%, 25%);
   stroke-dasharray: 252;
   stroke-linecap: round;
-  stroke-dashoffset: 50;
+  stroke-dashoffset: 0;
   z-index: 500;
 }
 
@@ -747,28 +747,28 @@ svg .circle__langages, .circle__frameworks {
     line-height: 40px;
   }
   .cv {
-    animation: affichage-menu 1s ease-in both;
+    animation: affichage-menu 0.5s ease-in both;
   }
   .parcours {
-    animation: affichage-menu 0.8s ease-in both;
-  }
-  .competences {
-    animation: affichage-menu 0.6s ease-in both;
-  }
-  .projets {
     animation: affichage-menu 0.4s ease-in both;
   }
-  .contacter {
+  .competences {
+    animation: affichage-menu 0.3s ease-in both;
+  }
+  .projets {
     animation: affichage-menu 0.2s ease-in both;
+  }
+  .contacter {
+    animation: affichage-menu 0.1s ease-in both;
   }
 }
 @keyframes affichage-menu {
   from {
-    transform: translateY(-100%);
+    transform: translateX(20%);
     opacity: 0;
   }
   to {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
@@ -909,6 +909,9 @@ form .half .item .mail:focus, form .full .text:focus, form .half .item .nom:focu
   }
   form .half .item {
     width: 100%;
+  }
+  form .half .item input {
+    width: auto;
   }
   form .action {
     display: flex;

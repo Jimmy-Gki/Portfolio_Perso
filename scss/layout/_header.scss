@@ -81,29 +81,29 @@
     line-height: 40px;
 }
 .cv {
-    animation: affichage-menu 1s ease-in both;
+    animation: affichage-menu .5s ease-in both;
 }
 .parcours {
-    animation: affichage-menu .8s ease-in both;
-}
-.competences {
-    animation: affichage-menu .6s ease-in both;
-}
-.projets {
     animation: affichage-menu .4s ease-in both;
 }
-.contacter {
+.competences {
+    animation: affichage-menu .3s ease-in both;
+}
+.projets {
     animation: affichage-menu .2s ease-in both;
+}
+.contacter {
+    animation: affichage-menu .1s ease-in both;
 }
 }
 
 @keyframes affichage-menu {
     from {
-        transform: translateY(-100%);
+        transform: translateX(20%);
         opacity: 0;
     }
     to {
-        transform: translateY(0);
+        transform: translateX(0);
         opacity: 1;
     }
 }
