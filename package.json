@@ -3,7 +3,7 @@
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.9.1",
     "php": "^1.0.2",
-    "sass": "^1.55.0"
+    "sass": "^1.58.1"
   },
   "name": "portfolio",
   "version": "1.0.0",

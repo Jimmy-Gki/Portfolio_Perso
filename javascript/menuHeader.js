@@ -3,4 +3,5 @@ const menuHamburger = document.querySelector(".checkbtn")
      
             menuHamburger.addEventListener('click',()=>{
             navLinks.classList.toggle('mobile-menu')
-            });
+            }
+        );

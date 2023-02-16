@@ -195,6 +195,7 @@ body {
   align-items: center;
   margin: 10px 20px 0 20px;
   border-bottom: 3px solid black;
+  transform: translateX(-100px);
 }
 .parcours_box .parcours_contenu .parcours_liste .bac p {
   padding-right: 20px;
@@ -222,6 +223,7 @@ body {
   align-items: center;
   margin: 10px 20px 0 20px;
   border-bottom: 3px solid black;
+  transform: translateX(100px);
 }
 .parcours_box .parcours_contenu .parcours_liste .formation i {
   padding-right: 15px;
@@ -248,6 +250,7 @@ body {
   height: 200px;
   align-items: center;
   margin: 10px 20px 0 20px;
+  transform: translateX(-100px);
 }
 .parcours_box .parcours_contenu .parcours_liste .stage p {
   padding-right: 20px;
@@ -265,6 +268,21 @@ body {
   .parcours_box .parcours_contenu .parcours_liste .stage i {
     padding-right: 0;
   }
+}
+.parcours_box .parcours_contenu .parcours_liste .scroll-animation-left.visible {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity 1.5s, transform 1.5s;
+}
+.parcours_box .parcours_contenu .parcours_liste .scroll-animation-right.visible {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity 1.5s, transform 1.5s;
+}
+.parcours_box .parcours_contenu .parcours_liste .scroll-animation-left,
+.parcours_box .parcours_contenu .parcours_liste .scroll-animation-right {
+  opacity: 0;
+  position: relative;
 }
 
 #cv {
@@ -498,11 +516,11 @@ svg .circle__langages, .circle__frameworks {
 }
 
 .javascript:nth-child(2) {
-  stroke-dashoffset: 93;
+  stroke-dashoffset: 88;
 }
 
 .sass:nth-child(2) {
-  stroke-dashoffset: 71;
+  stroke-dashoffset: 75;
 }
 
 .bootstrap:nth-child(2) {
@@ -510,7 +528,7 @@ svg .circle__langages, .circle__frameworks {
 }
 
 .nodejs:nth-child(2) {
-  stroke-dashoffset: 106;
+  stroke-dashoffset: 101;
 }
 
 #projets {
@@ -847,27 +865,25 @@ form .action {
 }
 
 form .action button {
-  background: transparent;
+  cursor: pointer;
   border-radius: 4px;
   border: 1px solid white;
-  cursor: pointer;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   height: 44px;
   letter-spacing: 3px;
   outline: 0;
   padding: 0 20px 0 22px;
   margin-right: 10px;
-}
-
-form .action button {
   background: white;
   color: #0d0f17;
+  transition: transform 0.2s ease-in-out;
 }
 
 form .action button:hover {
-  background: #0d0f17;
+  background: rgba(27, 31, 34, 0.8);
   color: rgb(224, 224, 224);
+  transform: scale(1.05);
 }
 
 form .icons a {
@@ -876,12 +892,11 @@ form .icons a {
   line-height: 36px;
   text-align: center;
   font-weight: 600;
-  width: 38px;
   margin-right: 25px;
 }
 
 form .icons a:hover {
-  color: red;
+  color: white;
 }
 
 form .half .item .mail:focus, form .full .text:focus, form .half .item .nom:focus {

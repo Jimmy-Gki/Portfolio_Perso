@@ -32,3 +32,27 @@ window.onload = function() {
         writeText();
     }
 };
+
+
+// Fonction pour ajouter la classe "visible" aux éléments lorsque ceux-ci sont visibles dans la fenêtre
+function handleScroll() {
+    const elements = document.querySelectorAll('.scroll-animation-left, .scroll-animation-right');
+  
+    for (let i = 0; i < elements.length; i++) {
+      const element = elements[i];
+      const rect = element.getBoundingClientRect();
+      const style = window.getComputedStyle(element);
+  
+      if (rect.top < window.innerHeight && rect.bottom >= 0 && style.opacity === '0') {
+        element.style.left = '0';
+        element.classList.add('visible');
+      }
+    }
+  }
+  
+  // Ajoute un événement de défilement pour appeler la fonction
+  window.addEventListener('scroll', handleScroll);
+  
+  // Appelle la fonction une première fois au chargement de la page
+  handleScroll();
+
